@@ -52,6 +52,12 @@ public class Icm20948Driver implements DeviceInterface
         this.deviceAddress = deviceAddress;
     }
 
+    @Override
+    public void close() throws RuntimeIOException
+    {
+        this.i2cDevice.close();
+    }
+
     public void mpuInit() throws RuntimeIOException
     {
         // set bank 0
@@ -795,13 +801,6 @@ public class Icm20948Driver implements DeviceInterface
     {
         return (this.readRegisterFromMagnetometer(Ak09916Constants.ST1) & 0x01)
                 > 0;
-    }
-
-    @Override
-    public void close() throws RuntimeIOException
-    {
-        // TODO Auto-generated method stub
-
     }
 
 }
