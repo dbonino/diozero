@@ -127,7 +127,7 @@ public class Icm20948Constants
     static final byte BIT_INT1_OPEN = (byte) 0x40;
     // Interrupt latch. if set at 1, the pin level is held until interrupt
     // status is cleared, if 0 the interrupt pulse width is 50us
-    static final byte BIT_LATCH_EN = (byte) 0x80;
+    static final byte BIT_INT1_LATCH_EN = (byte) 0x20;
     // interrupt status configuration. If set at 1, the interrupt status is
     // cleared at any read operation. On the converse, if set at 0 the interrupt
     // status is cleared only by reading the INT_STATUS register.
@@ -301,10 +301,10 @@ public class Icm20948Constants
     static final byte BIT_FIFO_CFG = (byte) 0x01;
 
     // ---- REG_BANK_SEL ---
-    static final byte BIT_BANK_SEL_0 = (byte) 0x00;
-    static final byte BIT_BANK_SEL_1 = (byte) 0x10;
-    static final byte BIT_BANK_SEL_2 = (byte) 0x20;
-    static final byte BIT_BANK_SEL_3 = (byte) 0x30;
+    static final byte BANK_SEL_0 = (byte) 0x00;
+    static final byte BANK_SEL_1 = (byte) 0x10;
+    static final byte BANK_SEL_2 = (byte) 0x20;
+    static final byte BANK_SEL_3 = (byte) 0x30;
 
     // ---- GYRO_CONFIG_1 ----
     // Gyro low pass filter configuration[bit 5:3].
@@ -315,7 +315,7 @@ public class Icm20948Constants
     static final byte DLPFCFG_151HZ = (byte) 0x09;
     static final byte DLPFCFG_119HZ = (byte) 0x11;
     static final byte DLPFCFG_51HZ = (byte) 0x19;
-    static final byte DLPFCFG_24Hz = (byte) 0x21;
+    static final byte DLPFCFG_24HZ = (byte) 0x21;
     static final byte DLPFCFG_12HZ = (byte) 0x29;
     static final byte DLPFCFG_6HZ = (byte) 0x31;
     static final byte DLPFCFG_361HZ = (byte) 0x39;
